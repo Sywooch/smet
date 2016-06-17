@@ -10,7 +10,7 @@
 	var inputs = document.querySelectorAll( '.inputfile' );
 	Array.prototype.forEach.call( inputs, function( input )
 	{
-		var label	 = input.nextElementSibling,
+		var label	 = document.querySelector('.control-label'),
 			labelVal = label.innerHTML;
 
 		input.addEventListener( 'change', function( e )

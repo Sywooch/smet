@@ -24,16 +24,17 @@ use vova07\fileapi\Widget as FileAPI;
 
                     <?php $form = ActiveForm::begin(['id' => 'feedback-form', 'layout' => 'horizontal',
                         'options' => ['enctype' => 'multipart/form-data'],
-                        'fieldConfig' => [
-                            'template' => "{label}\n{beginWrapper}\n{input}\n{hint}\n{error}\n{endWrapper}",
-                            'horizontalCssClasses' => [
-                                'label' => 'col-sm-8',
-                                'offset' => 'col-sm-offset-4',
-                                'wrapper' => 'col-sm-16',
-                                'error' => '',
-                                'hint' => '',
-                            ],
-                        ],]); ?>
+                        // 'fieldConfig' => [
+                        //     'template' => "{label}\n{beginWrapper}\n{input}\n{hint}\n{error}\n{endWrapper}",
+                        //     'horizontalCssClasses' => [
+                        //         'label' => 'col-sm-8',
+                        //         'offset' => 'col-sm-offset-4',
+                        //         'wrapper' => 'col-sm-16',
+                        //         'error' => '',
+                        //         'hint' => '',
+                        //     ],
+                        // ]
+                        ]); ?>
 
                     <?= $form->field($model, 'name', ['inputOptions' => ['class' => 'input_form']])->textInput()->input('name', ['placeholder' => Yii::t('app', 'Your name')])->label(false); ?>
 
@@ -41,7 +42,7 @@ use vova07\fileapi\Widget as FileAPI;
 
                     <?= $form->field($model, 'massage', ['inputOptions' => ['class' => 'input_form textarea']])->textArea(['rows' => 3, 'cols' => 80, 'placeholder' => Yii::t('app', 'Message text')])->label(false);?>
 
-                    <?= $form->field($model, 'file')->fileInput(['multiple' => false])->label(Yii::t('app', 'Attach file')) ?>
+                    <?= $form->field($model, 'file',['inputOptions' => ['class' => 'inputfile ']])->fileInput(['multiple' => true])->label('<span>'.Yii::t('app', 'Attach file')).'</span>' ?>
 
                     <div class="form-group send-request">
                         <?= Html::submitButton(Yii::t('app', 'Send request'), ['class' => 'button', 'name' => 'contact-button']) ?>

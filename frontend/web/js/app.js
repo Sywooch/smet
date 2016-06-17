@@ -211,10 +211,8 @@ $(".lang_m-select__input").change(function(){
 
 });
 $(document).ready(function() {
-	$(".fancybox").fancybox({
-		openEffect	: 'none',
-		closeEffect	: 'none'
-	});
+
+	
 	$('.show_phone span').click(function () {
         var number = $('.show');
         $(this).addClass('active').html(number);

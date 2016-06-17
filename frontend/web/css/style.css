@@ -184,7 +184,7 @@
     overflow: hidden;
     display: block;
 }
-#Upload0Attachment, #Upload1Attachment, #UserPhoto, #Upload2Attachment, #Upload3Attachment, #Upload4Attachment, #UserDoc1, #UserDoc2, #RecallPhoto, #photo, #MessagePhoto, #UserAttachments, #file-5 {
+#feedback-file {
     width: 0.1px;
     height: 0.1px;
     opacity: 0;
@@ -194,7 +194,7 @@
     outline: none;
 }
 
-.inputfile.inputfile-5 + label {
+.control-label.col-sm-8{
     width: 100%;
     color: #00698c;
     padding: 0px;
