@@ -38,10 +38,10 @@ class Slider extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['anounce', 'description', 'meta_keywords', 'meta_description'], 'string'],
+            [['meta_keywords', 'meta_description'], 'string'],
             [['created', 'updated', 'is_published', 'created_user_id', 'updated_user_id', 'sort_index'], 'integer'],
             [['title', 'photo', 'slug', 'link'], 'string', 'max' => 255],
-            [['title', 'description'], 'required'],
+            [['title'], 'required'],
             [['file'], 'file', 'maxFiles' => 10]
         ];
     }

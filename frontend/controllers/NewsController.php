@@ -29,8 +29,8 @@ class NewsController extends \yii\web\Controller
 
     public function actionView($slug){
 
-        $model = News::find()->where(['is_published' => 1, 'lang_id' => Lang::getCurrent()->id])->one();
-
+//        $model = News::find()->where(['is_published' => 1, 'lang_id' => Lang::getCurrent()->id])->one();
+        $model = $this->findNews($slug);
         return $this->render('view', [
             'model' => $model,
         ]);
