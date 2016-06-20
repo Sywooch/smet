@@ -32,7 +32,7 @@ class Text extends \yii\db\ActiveRecord
         return [
             [['key', 'value'], 'required'],
             [['created', 'updated', 'created_user_id', 'updated_user_id', 'lang_id'], 'integer'],
-            [['key', 'comment'], 'string', 'max' => 255]
+            [['key'], 'string', 'max' => 255]
         ];
     }
 
