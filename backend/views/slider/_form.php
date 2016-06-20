@@ -43,7 +43,33 @@ use common\models\Category;
 
                 <div class="row">
                     <div class="col-md-8 col-xs-12">
-                        <?= $form->field($model, 'title')->textInput(['maxlength' => 255]) ?>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Русский</a></li>
+                            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Казахский</a></li>
+                            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">English</a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home">
+
+                                <?= $form->field($model, 'title_ru')->textInput(['maxlength' => true]) ?>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile">
+
+                                <?= $form->field($model, 'title_kz')->textInput(['maxlength' => true]) ?>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="messages">
+
+                                <?= $form->field($model, 'title_en')->textInput(['maxlength' => true]) ?>
+
+                            </div>
+
+                        </div>
                         
                         <?= $form->field($model, 'link')->textInput(['maxlength' => 255]) ?>
                         

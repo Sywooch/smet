@@ -16,7 +16,9 @@ class m160112_182121_create_slider_table extends Migration
 
         $this->createTable('{{%slider}}', [
             'id' => $this->primaryKey(),
-            'title' => $this->string(),
+            'title_ru' => $this->string(),
+            'title_en' => $this->string(),
+            'title_kz' => $this->string(),
             'photo' => $this->string(),
             'link' => $this->string(),
 
@@ -36,11 +38,11 @@ class m160112_182121_create_slider_table extends Migration
         ], $tableOptions);
 
         $this->batchInsert('{{%slider}}',
-            ['title', 'photo','created', 'updated', 'is_published'],
+            ['title_ru', 'title_en', 'title_kz', 'photo','created', 'updated', 'is_published'],
             [
-                ['Слайд 1', 'slider.jpg', time(), time(), 1],
-                ['Слайд 2', 'slider.jpg', time(), time(), 1],
-                ['Слайд 3', 'slider.jpg', time(), time(), 1],
+                ['Слайд 1', 'Slide 1', 'Слайд 1', 'slider.jpg', time(), time(), 1],
+                ['Слайд 2', 'Slide 2', 'Слайд 2', 'slider.jpg', time(), time(), 1],
+                ['Слайд 3', 'Slide 3', 'Слайд 3', 'slider.jpg', time(), time(), 1],
             ]
         );
     }

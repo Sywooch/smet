@@ -19,7 +19,7 @@ class SliderSearch extends Slider
     {
         return [
             [['id', 'created', 'updated', 'is_published', 'created_user_id', 'updated_user_id', 'sort_index'], 'integer'],
-            [['title', 'photo', 'meta_keywords', 'meta_description', 'slug', 'link'], 'safe'],
+            [['title_ru', 'title_kz', 'title_en', 'photo', 'meta_keywords', 'meta_description', 'slug', 'link'], 'safe'],
         ];
     }
 
@@ -65,7 +65,7 @@ class SliderSearch extends Slider
             'is_published' => $this->is_published,
         ]);
 
-        $query->andFilterWhere(['like', 'title', $this->title])
+        $query->andFilterWhere(['like', 'title_ru', $this->title_ru])
             ->andFilterWhere(['like', 'photo', $this->photo])
             ->andFilterWhere(['like', 'meta_keywords', $this->meta_keywords])
             ->andFilterWhere(['like', 'meta_description', $this->meta_description])
