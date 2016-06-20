@@ -40,8 +40,8 @@ class Slider extends \yii\db\ActiveRecord
         return [
             [['meta_keywords', 'meta_description'], 'string'],
             [['created', 'updated', 'is_published', 'created_user_id', 'updated_user_id', 'sort_index'], 'integer'],
-            [['title', 'photo', 'slug', 'link'], 'string', 'max' => 255],
-            [['title'], 'required'],
+            [['title_ru', 'title_kz', 'title_en', 'photo', 'slug', 'link'], 'string', 'max' => 255],
+            [['title_ru', 'title_kz', 'title_en'], 'required'],
             [['file'], 'file', 'maxFiles' => 10]
         ];
     }
@@ -50,7 +50,9 @@ class Slider extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'title' => Yii::t('app', 'Title'),
+            'title_ru' => Yii::t('app', 'Title'),
+            'title_kz' => Yii::t('app', 'Title'),
+            'title_en' => Yii::t('app', 'Title'),
             'file' => Yii::t('app', 'File'),
             'anounce' => Yii::t('app', 'Anounce'),
             'category_id' => Yii::t('app', 'Category'),
@@ -103,7 +105,7 @@ class Slider extends \yii\db\ActiveRecord
             ],
             [
                 'class' => SluggableBehavior::className(),
-                'attribute' => 'title',
+                'attribute' => 'title_ru',
                 'slugAttribute' => 'slug'
             ],
             [

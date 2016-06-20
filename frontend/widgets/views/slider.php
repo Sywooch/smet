@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 use himiklab\thumbnail\EasyThumbnailImage;
-
+use common\models\Lang;
 
 /* @var $this yii\web\View
  * @var $news
@@ -23,6 +23,9 @@ use himiklab\thumbnail\EasyThumbnailImage;
                 );
                 ?>
             </div>
+            <div><?= (Lang::getCurrent()->id == 1) ? $slide->title_en : ' '; ?></div>
+            <div><?= (Lang::getCurrent()->id == 2) ? $slide->title_ru : ' '; ?></div>
+            <div><?= (Lang::getCurrent()->id == 3) ? $slide->title_kz : ' '; ?></div>
         </div>
     <?php } ?>
 </div>

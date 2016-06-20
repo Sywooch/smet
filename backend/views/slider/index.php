@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     return Html::img($data->image,['width'=>50]);
                 },
             ],
-            'title',
+            'title_ru',
 //            'description:ntext',
             //'photo',
             // 'status',
