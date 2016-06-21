@@ -36,17 +36,7 @@ use yii\helpers\Url;
 
                         <?= $form->field($model, 'key')->textInput(['maxlength' => true]) ?>
 
-                        <?= $form->field($model, 'value')->widget(Widget::className(), [
-                            'settings' => [
-                                'lang' => 'ru',
-                                'minHeight' => 150,
-                                'imageUpload' => Url::to(['/site/image-upload']),
-                                'imageManagerJson' => Url::to(['/site/images-get']),
-                                'plugins' => [
-                                    'imagemanager'
-                                ]
-                            ]
-                        ]); ?>
+                        <?= $form->field($model, 'value')->textarea(['rows' => 4]) ?>
 
                     </div>
                 </div>
