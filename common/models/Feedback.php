@@ -25,7 +25,8 @@ use yii\web\UploadedFile;
 class Feedback extends \yii\db\ActiveRecord
 {
     public $file;
-
+    public $verifyCode;
+    
     public static function tableName()
     {
         return '{{%feedback}}';
@@ -38,7 +39,8 @@ class Feedback extends \yii\db\ActiveRecord
             [['massage'], 'string'],
             [['file'], 'file'],
             [['created', 'updated'], 'safe'],
-            [['name', 'email', 'feed_file'], 'string', 'max' => 255]
+            [['name', 'email', 'feed_file'], 'string', 'max' => 255],
+//            ['verifyCode', 'captcha']
         ];
     }
 
@@ -52,6 +54,7 @@ class Feedback extends \yii\db\ActiveRecord
             'file' => Yii::t('app', 'File'),
             'created' => Yii::t('app', 'Created'),
             'updated' => Yii::t('app', 'Updated'),
+            'verifyCode' => 'Код проверки',
         ];
     }
 

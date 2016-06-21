@@ -15,7 +15,7 @@ class FeedbackForm extends Model
     public $email;
     public $massage;
     public $file;
-
+    public $verifyCode;
 
     /**
      * @inheritdoc
@@ -26,7 +26,8 @@ class FeedbackForm extends Model
             [['name', 'email', 'massage'], 'required'],
             [['massage'], 'string'],
             [['file'], 'file'],
-            [['name', 'email', 'feed_file'], 'string', 'max' => 255]
+            [['name', 'email', 'feed_file'], 'string', 'max' => 255],
+            ['verifyCode', 'captcha']
         ];
     }
 

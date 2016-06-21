@@ -32,7 +32,8 @@
         "yiisoft/yii2-authclient": "*",
         "vova07/yii2-imperavi-widget": "~1.1.6",
         "dmstr/yii2-adminlte-asset": "2.*",
-        "himiklab/yii2-sortable-grid-view-widget" : "*"
+        "himiklab/yii2-sortable-grid-view-widget" : "*",
+        "softark/yii2-mb-captcha": "dev-master"
     },
     "config": {
         "process-timeout": 1800

@@ -11,6 +11,7 @@ use frontend\widgets\SliderWidget;
 use common\models\Text;
 use yii\bootstrap\ActiveForm;
 use vova07\fileapi\Widget as FileAPI;
+use yii\captcha\Captcha;
 
 ?>
 
@@ -40,6 +41,8 @@ use vova07\fileapi\Widget as FileAPI;
                     <?= $form->field($model, 'email', ['inputOptions' => ['class' => 'input_form']])->textInput()->input('name', ['placeholder' => 'Email'])->label(false); ?>
 
                     <?= $form->field($model, 'massage', ['inputOptions' => ['class' => 'input_form textarea']])->textArea(['rows' => 3, 'cols' => 80, 'placeholder' => Yii::t('app', 'Message text')])->label(false);?>
+
+                    <?= $form->field($model, 'verifyCode')->widget(Captcha::className())->label(false); ?>
 
                     <?= $form->field($model, 'file')->fileInput(['multiple' => false])->label(Yii::t('app', 'Attach file')) ?>
 
