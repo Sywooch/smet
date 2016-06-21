@@ -1,11 +1,11 @@
 <?php
-
+use yii\helpers\Url;
 ?>
 
 <ul class="service_list">
     <?php foreach($articles as $article) {?>
     <li>
-    <a href="">
+    <a href="<?= Url::toRoute(['/article/view', 'slug' => $article->slug]) ?>">
         <div class="service_item">
             <div class="service_img">
                 <?php
