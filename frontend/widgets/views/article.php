@@ -5,6 +5,7 @@
 <ul class="service_list">
     <?php foreach($articles as $article) {?>
     <li>
+    <a href="">
         <div class="service_item">
             <div class="service_img">
                 <?php
@@ -20,6 +21,7 @@
                 <?= $article->title?>
             </div>
         </div>
+        </a>
     </li>
    <?php } ?>
 </ul>

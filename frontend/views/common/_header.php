@@ -10,20 +10,59 @@ use common\models\Text;
 <header id="header">
     <div class="top_line">
         <div class="cr">
+        	<!--Мобильная часть -->
+			<div class="top_header">
+					<div class="m_menu"></div>
+					<div class="mob_part">
+						<ul class="mob_ul">
+							<li class="active"><a href="" >Главная </a></li>
+							<li class="active"><a href="" >О нас </a></li>
+							<li><p class="sub">Услуги</p>
+								<ul class="m_sub_menu "><li><a href="">
+                текстовый перевод            </a></li>
+               			 <li><a href="">
+                устный перевод            </a></li>
+                		<li><a href="">
+                устный перевод            </a></li>
+                		<li><a href="">
+                телефизионный перевод            </a></li>
+                		<li><a href="">
+                локализация            </a></li>
+                		<li><a href="">
+                сурдоперевод и тифлокомментирование            </a></li>
+                		<li><a href="">
+                перевод рекламы            </a></li></ul>			
+							</li>
+							<li><p class="sub">Цены и оплата</p>
+									<ul class="m_sub_menu "><li><a href="">
+	               Цены и оплата  </a></li>
+	               			 <li><a href="">
+	                Способы оплаты           </a></li>
+	                		<li><a href="">
+	                Клуб Smet         </a></li></ul>			
+							</li>
+							<li><a href="">Новости и акции         </a></li>
+							<li><a href="">Карьера </a></li>
+							<li><a href="">Контакты</a></li>
+						</ul>
+						<div class="mob_close"></div>
+					</div>
+			</div>
+			<!--Мобильная часть конец-->
             <a href="/" class="logo_slogn">
                 <img src="/img/slogan.png" alt="">
             </a>
             <div class="head_item">
                 <div class="show_phone">+7 <span class="show_mob" data-number="707 862 53 48"><?= Yii::t('app', 'show phone') ?></span>
                     <a href="tel:77078625348" class="show"> <?= Text::getValue('phone')?></a></div>
-                <div class="mail">
-                    <?= Text::getValue('e-mail')?>
-                </div>
+                <div class="mail">info
+                <span class="show_mail" data-mail="707 862 53 48">показать</span>
+                         <a href="mail:info@smet.kz" class="shows"> <?= Text::getValue('phone')?></a>
+                 </div>
                 <ul class="soc_seti">
                     <li><a href=""><img src="/img/vk.png" alt=""></a></li>
                     <li><a href=""><img src="/img/youtube.png" alt=""></a></li>
                     <li><a href=""><img src="/img/insta.png" alt=""></a></li>
-                    <li><a href=""><img src="/img/twit.png" alt=""></a></li>
                     <li><a href=""><img src="/img/google.png" alt=""></a></li>
                     <li><a href=""><img src="/img/face.png" alt=""></a></li>
                 </ul>
@@ -50,12 +89,45 @@ use common\models\Text;
             <ul class="menu">
                 <li><a href="/"><?= Yii::t('app', 'Home') ?></a></li>
                 <li><a href="<?= Url::toRoute(['/article/view?slug=o-nas'])?>"><?= Yii::t('app', 'About us') ?></a></li>
-                <li><a href=""><?= Yii::t('app', 'Services') ?></a></li>
-                <li><a href="<?= Url::toRoute(['/article/view?slug=ceny-i-oplata'])?>"><?= Yii::t('app', 'Price and payment') ?></a></li>
+                <li><a href=""><?= Yii::t('app', 'Services') ?></a>
+                <div class="sub_conainer">
+					<ul class="sub_menu">
+						<li><a href="">
+                текстовый перевод            </a></li>
+               			 <li><a href="">
+                устный перевод            </a></li>
+                		<li><a href="">
+                устный перевод            </a></li>
+                		<li><a href="">
+                телефизионный перевод            </a></li>
+                		<li><a href="">
+                локализация            </a></li>
+                		<li><a href="">
+                сурдоперевод и тифлокомментирование            </a></li>
+                		<li><a href="">
+                перевод рекламы            </a></li>
+					</ul>
+				</div>
+                </li>
+                <li><a href="<?= Url::toRoute(['/article/view?slug=ceny-i-oplata'])?>"><?= Yii::t('app', 'Price and payment') ?></a>
+					<div class="sub_conainer">
+						<ul class="sub_menu">
+							<li><a href="">
+	               Цены и оплата  </a></li>
+	               			 <li><a href="">
+	                Способы оплаты           </a></li>
+	                		<li><a href="">
+	                Клуб Smet         </a></li>
+						</ul>
+					</div>
+                </li>
                 <li><a href="<?= Url::toRoute(['/news'])?>"><?= Yii::t('app', 'News and events') ?></a></li>
                 <li><a href="<?= Url::toRoute(['/article/view?slug=kariera'])?>"><?= Yii::t('app', 'Career') ?></a></li>
                 <li><a href="<?= Url::toRoute(['/article/view?slug=contact'])?>"><?= Yii::t('app', 'Contacts') ?></a></li>
             </ul>
+
         </nav>
+        .
     </div>
 </header>
+<div class="head_top_padding"></div>

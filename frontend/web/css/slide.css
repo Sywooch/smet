@@ -236,9 +236,9 @@
     content: ">";
     position: absolute;
     top: 9px;
-    right: 0;
+    right: -20px;
     width: 10px;
-    height: 32;
+    height: 32px;
     background-image: url(../img/right.png);
     background-repeat: no-repeat;
 }
@@ -248,10 +248,35 @@
     top: 9px;
     left: -20px;
     width: 10px;
-    height: 32;
+    height: 32px;
     background-image: url(../img/left.png);
     background-repeat: no-repeat;
 }
 .slick-prev-partners.slick-arrow:hover,.slick-next-partners.slick-arrow:hover{
     cursor:pointer;
+}
+@media screen and (max-width: 960px){
+	.slider.slick-initialized.slick-slider {
+    overflow: hidden;
+    width: 100%;
+    float: left;
+    height: 350px;
+}
+.partners.slick-initialized.slick-slider {
+    width: 90%;
+    margin:0 auto 25px;
+}
+
+}
+
+@media screen and (max-width: 480px){
+.slider.slick-initialized.slick-slider{
+	display:none;
+}
+.slick-prev-partners.slick-arrow {
+    left: 0px;
+}
+.slick-next-partners.slick-arrow {
+    right: 0px;
+}
 }

@@ -70,7 +70,25 @@ jQuery(document).ready(function ($) {
         slidesToScroll: 1,
         pauseOnHover: true,
         initialSlide: 0,
+		responsive: [{
+            breakpoint: 960,
+            settings: {
+                arrows: true,
+                centerMode: false,
+                slidesToShow: 4,
+            },
+			 breakpoint: 758,
+            settings: {
+                slidesToShow: 2,
+            },
+			 breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+			
 
+        }
+        ],
         prevArrow: '<span class="slick-prev-partners" aria-label="previous"></span>',
         nextArrow: '<span class="slick-next-partners" aria-label="next"></span>'
     });
@@ -89,8 +107,16 @@ jQuery(document).ready(function ($) {
         responsive: [{
             breakpoint: 960,
             settings: {
-                arrows: true,
+                arrows: false,
                 centerMode: true,
+                slidesToShow: 3,
+            },
+			 breakpoint: 758,
+            settings: {
+                slidesToShow: 2,
+            },
+			 breakpoint: 480,
+            settings: {
                 slidesToShow: 1,
             }
 
@@ -116,20 +142,21 @@ $(document).ready(function() {
          var $mob_part = $('.mob_part');
         $mob_part.animate({width: "hide"},  "800");
     });
-     $('.m_sub').on('click', function(){
-		 
-        if(($(this)).siblings('.sb').hasClass('sub_show')){
-			$(this).siblings('.sb').removeClass('sub_show');
-			
+      $('.sub').on('click', function(){
+        if(($(this)).siblings('.m_sub_menu').hasClass('sub_show')){
+        $(this).siblings('.m_sub_menu').removeClass('sub_show');    
+        $(this).siblings('.m_sub_menu').animate({height: "hide"},  "800");
+            
         }else{
-            $(this).siblings('.sb').addClass('sub_show');
-			
+            $(this).siblings('.m_sub_menu').addClass('sub_show');
+             $(this).siblings('.m_sub_menu').animate({height: "show"}  ,"800")
+            
         }
-		if($(this).parent().siblings().children('.sb').hasClass('sub_show')){
-			$(this).parent().siblings().children('.sb').removeClass('sub_show');
-		}
+        if($(this).parent().siblings().children('.m_sub_menu').hasClass('sub_show')){
+            $(this).parent().siblings().children('.m_sub_menu').removeClass('sub_show');
+              $(this).parent().siblings().children('.m_sub_menu').animate({height: "hide"},  "800");
+        }
     });
-
    
 
 });
@@ -217,5 +244,14 @@ $(document).ready(function() {
         var number = $('.show');
         $(this).addClass('active').html(number);
          $('.show').css("display","block");
+    });
+});
+$(document).ready(function() {
+
+	
+	$('.show_mail ').click(function () {
+        var number = $('.shows');
+        $(this).addClass('active').html(number);
+         $('.shows').css("display","block");
     });
 });

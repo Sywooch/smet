@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 ?>
-<div class="form_container">
+<div class="form_container text">
     <div class="form mr-no">
         <div class="form_content">
             <div class="form_title text_left"><?= $mainArticle->title ?></div>
