@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "82404aad219630a7ab0b70b42d9a2840",
-    "content-hash": "dce8d90abe236c96af8a679ef768218e",
+    "hash": "05043f979a5744bc8afe27d855c649f8",
+    "content-hash": "1250bb721b94789597c604e08a0c2ae7",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -1243,6 +1243,48 @@
             "time": "2015-09-11 15:56:14"
         },
         {
+            "name": "softark/yii2-mb-captcha",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/softark/yii2-mb-captcha.git",
+                "reference": "83c56fe5978dfd91ad2f4b001f95b3659b3dcab5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/softark/yii2-mb-captcha/zipball/83c56fe5978dfd91ad2f4b001f95b3659b3dcab5",
+                "reference": "83c56fe5978dfd91ad2f4b001f95b3659b3dcab5",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "softark\\mbcaptcha\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nobuo Kihara",
+                    "email": "softark@gmail.com",
+                    "homepage": "http://softark.net"
+                }
+            ],
+            "description": "Yii2 Multibyte CAPTCHA",
+            "keywords": [
+                "captcha",
+                "multibyte",
+                "yii2"
+            ],
+            "time": "2015-03-22 17:32:14"
+        },
+        {
             "name": "vova07/yii2-fileapi-widget",
             "version": "dev-master",
             "source": {
@@ -1684,7 +1726,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "vova07/yii2-fileapi-widget": 20,
-        "newerton/yii2-fancybox": 20
+        "newerton/yii2-fancybox": 20,
+        "softark/yii2-mb-captcha": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
