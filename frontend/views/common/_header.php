@@ -79,7 +79,7 @@ $downArticles = \common\models\Article::find()->where(['category_id' => '7', 'is
             <img src="/img/logo.jpg" alt="">
         </a>
         <nav>
-            <ul class="menu">
+            <ul class="menu <?= (Lang::getCurrent()->id == 3) ? 'menu-kaz' : ' '; ?>">
                 <li><a href="/"><?= Yii::t('app', 'Home') ?></a></li>
                 <li><a href="<?= Url::toRoute(['/article/view?slug=o-nas'])?>"><?= Yii::t('app', 'About us') ?></a></li>
                 <li><a href=""><?= Yii::t('app', 'Services') ?></a>
