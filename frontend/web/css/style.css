@@ -1,12 +1,12 @@
 
 
-/* font-family: "HelveticaNeueCyr-Bold" */
+/* font-family: "Calibri-Bold" */
 @font-face {
-    font-family: "HelveticaNeueCyr-Bold";
-    src: url("../fonts/HelveticaNeueCyr-Bold/HelveticaNeueCyr-Bold.eot");
-    src: url("../fonts/HelveticaNeueCyr-Bold/HelveticaNeueCyr-Bold.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/HelveticaNeueCyr-Bold/HelveticaNeueCyr-Bold.woff") format("woff"),
-    url("../fonts/HelveticaNeueCyr-Bold/HelveticaNeueCyr-Bold.ttf") format("truetype");
+    font-family: "Calibri-Bold";
+    src: url("../fonts/Calibri-Bold/Calibri-Bold.eot");
+    src: url("../fonts/Calibri-Bold/Calibri-Bold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Calibri-Bold/Calibri-Bold.woff") format("woff"),
+    url("../fonts/Calibri-Bold/Calibri-Bold.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
@@ -17,6 +17,16 @@
     src: url("../fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.eot?#iefix")format("embedded-opentype"),
     url("../fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.woff") format("woff"),
     url("../fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "Calibri"; */
+@font-face {
+    font-family: "Calibri";
+    src: url("../fonts/Calibri/Calibri.eot");
+    src: url("../fonts/Calibri/Calibri.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Calibri/Calibri.woff") format("woff"),
+    url("../fonts/Calibri/Calibri.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
@@ -41,7 +51,7 @@
 .top_line {
     height: 42px;
     background: #00698c;
-    font-family: "Helvetica-Roman";
+    font-family: "Calibri";
     color: #Fff;
     font-size: 16px;
     overflow: hidden;
@@ -124,8 +134,8 @@
 .menu {
     display: inline-flex;
     list-style: none;
-    font-family: "Helvetica-Roman";
-    font-size: 14px;
+    font-family: "Calibri";
+    font-size: 16px;
     text-transform: uppercase;
     margin-left: 93px;
     margin-top: 25px;
@@ -168,6 +178,12 @@
 .menu li:hover .sub_conainer {
     display: block;
 }
+.menu.menu-kaz li {
+    margin-right: 10px;
+}
+.menu.menu-kaz {
+    margin-left: 47px;
+}
 .content {
     padding-top: 20px;
 }
@@ -198,7 +214,7 @@
 }
 
 .form_title {
-    font-family: "HelveticaNeueCyr-Bold";
+    font-family: "Calibri-Bold";
     color: #00698c;
     font-size: 18px;
     text-transform: uppercase;
@@ -207,7 +223,7 @@
 }
 .input_form {
     line-height: 30px;
-    width: 47%;
+    width: 47.7%;
     float: left;
     text-indent: 15px;
     margin-bottom: 15px;
@@ -217,6 +233,7 @@
     line-height: 16px;
     width: 100%;
     height: 70px;
+	padding:0;
 }
 .input_form:nth-child(2n) {
     float: right;
@@ -256,7 +273,7 @@
     margin-bottom: 12px;
     overflow: hidden;
     outline: none;
-    font-family: "Helvetica-Roman";
+    font-family: "Calibri";
 }
 .file {
     border: 2px solid #00698c;
@@ -274,7 +291,7 @@
     line-height: 30px;
     font-size: 14px;
     /* padding: 0; */
-    font-family: "Helvetica-Roman";
+    font-family: "Calibri";
     color: #fff;
     background: -moz-linear-gradient(top, #0492c2 0%,#0384b0 50%,#017196 51%,#006c90 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0492c2 ), color-stop(50%,#0384b0 ), color-stop(51%,#017196 ), color-stop(100%,#006c90 ));
@@ -336,9 +353,9 @@
     margin-bottom: 8px;
 }
 .sevice_name {
-    font-family: "HelveticaNeueCyr-Bold";
+    font-family: "Calibri-Bold";
     color: #0389b6;
-    font-size: 14px;
+    font-size: 16px;
 }
 .video {
     width: 50%;
@@ -347,11 +364,12 @@
 .form_content p {
     color: #818181;
     font-family: "";
-    font-family: "Helvetica-Roman";
+    font-family: "Calibri";
     text-indent: 25px;
     font-size: 14px;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
+
 .video_text {
     padding: 25px 0;
     /* overflow: hidden; */
@@ -372,7 +390,7 @@ footer {
     line-height: 40px;
     color: #fff;
     font-size: 16px;
-    font-family: "Helvetica-Roman";
+    font-family: "Calibri";
 
 }
 .developed a {
@@ -387,7 +405,7 @@ footer {
     list-style: none;
     margin-right: 20px;
     color: #00698c;
-    font-family: "Helvetica-Roman";
+    font-family: "Calibri";
     font-size: 14px;
 }
 .breadcrumbs li a{
@@ -422,7 +440,7 @@ footer {
     text-align: center;
     color: #fff;
     font-size: 22px;
-    font-family: "HelveticaNeueCyr-Bold";
+    font-family: "Calibri-Bold";
     text-transform: uppercase;
     margin-bottom: 25px;
     text-decoration: underline;
@@ -435,7 +453,7 @@ footer {
     float: left;
 }
 .min_title {
-    font-family: "HelveticaNeueCyr-Bold";
+    font-family: "Calibri-Bold";
     color: #01698c;
     font-size: 16px;
     margin-bottom: 15px;
@@ -443,7 +461,7 @@ footer {
 .content p {
     color: #626262;
     font-size: 14px;
-    font-family: "Helvetica-Roman";
+    font-family: "Calibri";
     line-height: 16px;
     margin-bottom: 15px;
 }
@@ -580,6 +598,7 @@ footer {
     position: absolute;
     top: 1px;
     right: 4px;
+    outline: none;
     position: absolute;
     top: 4px;
     right: 5px;
@@ -607,6 +626,15 @@ footer {
 	}
 	#header {
     position: static;
+    overflow: hidden;
+}
+.menu.menu-kaz {
+    margin-left: 47px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.head_top_padding {
+    display:none;
 }
 	.show_phone, .soc_seti, .lang, .mail {
     padding: 12px 5px;

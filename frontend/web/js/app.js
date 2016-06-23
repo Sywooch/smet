@@ -172,6 +172,15 @@ jQuery(function($){
 });
 jQuery(function($){
 	$(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $("#w0-success "); // тут указываем ID элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+		    && div.has(e.target).length === 0) { // и не по его дочерним элементам
+			$('#w0-success').animate({height: "hide"},  "800"); // скрываем его
+		}
+	});
+});
+jQuery(function($){
+	$(document).mouseup(function (e){ // событие клика по веб-документу
 		var div = $(".mob_part "); // тут указываем ID элемента
 		if (!div.is(e.target) // если клик был не по нашему блоку
 		    && div.has(e.target).length === 0) { // и не по его дочерним элементам
