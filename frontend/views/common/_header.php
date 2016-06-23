@@ -27,7 +27,7 @@ $downArticles = \common\models\Article::find()->where(['category_id' => '7', 'is
                                     <?php } ?>
                                 </ul>
 							</li>
-							<li><p class="sub">Цены и оплата</p>
+							<li><p class="sub"><?= Yii::t('app', 'Price and payment') ?></p>
 									<ul class="m_sub_menu ">
                                         <?php foreach($downArticles as $downArticle) {?>
                                             <li><a href="<?= Url::toRoute(['/article/view', 'slug' => $downArticle->slug]) ?>"><?= $downArticle->title ?></a></li>
@@ -82,7 +82,7 @@ $downArticles = \common\models\Article::find()->where(['category_id' => '7', 'is
             <ul class="menu <?= (Lang::getCurrent()->id == 3) ? 'menu-kaz' : ' '; ?>">
                 <li><a href="/"><?= Yii::t('app', 'Home') ?></a></li>
                 <li><a href="<?= Url::toRoute(['/article/view?slug=o-nas'])?>"><?= Yii::t('app', 'About us') ?></a></li>
-                <li><a href=""><?= Yii::t('app', 'Services') ?></a>
+                <li><a href="javascript:void(0);"><?= Yii::t('app', 'Services') ?></a>
                 <div class="sub_conainer">
 					<ul class="sub_menu">
                         <?php foreach($articles as $article) {?>
@@ -91,7 +91,7 @@ $downArticles = \common\models\Article::find()->where(['category_id' => '7', 'is
 					</ul>
 				</div>
                 </li>
-                <li><a href="<?= Url::toRoute(['/article/view?slug=ceny-i-oplata'])?>"><?= Yii::t('app', 'Price and payment') ?></a>
+                <li><a href="javascript:void(0);"><?= Yii::t('app', 'Price and payment') ?></a>
 					<div class="sub_conainer">
 						<ul class="sub_menu">
                             <?php foreach($downArticles as $downArticle) {?>
