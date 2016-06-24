@@ -62,7 +62,7 @@ jQuery(document).ready(function ($) {
         nextArrow: '<span class="slick-next slick-nav slick-nav--next" aria-label="next"></span>'
     });
       $('.partners').slick({
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 2000,
         speed: 1000,
         arrows: true,

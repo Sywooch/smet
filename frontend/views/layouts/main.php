@@ -25,6 +25,9 @@ AppAsset::register($this);
 
         <?= Alert::widget() ?>
         <?= $content?>
+        <div class="top" id="top" >
+                <a href="#header">верх</a>
+    </div>
     </div>
     <?= $this->render('/common/_footer')?>
 

@@ -594,6 +594,20 @@ footer {
     position: fixed;
     z-index: 999999;
 }
+.top {
+    /* padding: 10px; */
+    position: fixed;
+    background: #00698c;
+    left: 7px;
+    display: none;
+    bottom: 90px;
+    border: 1px solid #fff;
+}
+.top a {
+    color: #fff;
+    padding: 10px;
+    display: block;
+}
 .close {
     position: absolute;
     top: 1px;
