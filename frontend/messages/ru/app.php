@@ -17,6 +17,7 @@ return array(
     'Message text' => 'Текст сообщения',
     'Attach file' => 'Прикрепить файл',
     'languages' => 'языки',
+    'Our clients and partners' => 'наши клиенты и партнеры',
 );
 
 

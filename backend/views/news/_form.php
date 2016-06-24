@@ -77,6 +77,8 @@ use yii\helpers\ArrayHelper;
                             ])
                         ?>
 
+                        <?= $form->field($model, 'meta_title')->textInput(['maxlength' => 255]) ?>
+
                         <?= $form->field($model, 'meta_keywords')->textarea(['rows' => 4]) ?>
 
                         <?= $form->field($model, 'meta_description')->textarea(['rows' => 4]) ?>

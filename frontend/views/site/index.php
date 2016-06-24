@@ -13,6 +13,9 @@ use yii\bootstrap\ActiveForm;
 use vova07\fileapi\Widget as FileAPI;
 use yii\captcha\Captcha;
 //$form->field($model, 'verifyCode')->widget(Captcha::className())->label(false);
+$this->registerMetaTag(['name'=> 'title', 'content' =>  Text::getValue('meta_title')]);
+$this->registerMetaTag(['name'=> 'keywords', 'content' =>  Text::getValue('meta_keywords')]);
+$this->registerMetaTag(['name'=> 'description', 'content' => Text::getValue('meta_description')]);
 ?>
 
 <div class="slider_form">
