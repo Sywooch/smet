@@ -17,6 +17,7 @@ return array(
     'Message text' => 'Хабарлама',
     'Attach file' => 'Файлды тіркеу',
     'languages' => 'тілдер',
+    'Our clients and partners' => 'Біздің клиенттер мен серіктестер',
 );
 
 

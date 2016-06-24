@@ -41,7 +41,7 @@ class News extends \yii\db\ActiveRecord
         return [
             [['anounce', 'description', 'meta_keywords', 'meta_description'], 'string'],
             [['category_id', 'created', 'updated', 'is_published', 'created_user_id', 'updated_user_id', 'sort_index', 'lang_id'], 'integer'],
-            [['title', 'photo', 'slug'], 'string', 'max' => 255],
+            [['title', 'photo', 'slug', 'meta_title'], 'string', 'max' => 255],
             [['title', 'description'], 'required'],
             [['file'], 'file', 'maxFiles' => 10]
         ];
@@ -61,6 +61,7 @@ class News extends \yii\db\ActiveRecord
             'updated' => Yii::t('app', 'Updated'),
             'sort_index' => Yii::t('app', 'Sort Index'),
             'is_published' => Yii::t('app', 'Is Published'),
+            'meta_title' => Yii::t('app', 'Meta Title'),
             'meta_keywords' => Yii::t('app', 'Meta Keywords'),
             'meta_description' => Yii::t('app', 'Meta Description'),
             'slug' => Yii::t('app', 'Slug'),

@@ -19,7 +19,7 @@ class NewsSearch extends News
     {
         return [
             [['id', 'created', 'updated', 'is_published', 'created_user_id', 'updated_user_id', 'sort_index', 'lang_id'], 'integer'],
-            [['title', 'anounce', 'description', 'photo', 'meta_keywords', 'meta_description', 'slug'], 'safe'],
+            [['title', 'anounce', 'description', 'photo', 'meta_title', 'meta_keywords', 'meta_description', 'slug'], 'safe'],
         ];
     }
 
