@@ -41,7 +41,7 @@ class FeedbackSearch extends Feedback
      */
     public function search($params)
     {
-        $query = Feedback::find();
+        $query = Feedback::find()->orderBy('created desc');
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,

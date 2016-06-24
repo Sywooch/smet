@@ -5,6 +5,7 @@ use yii\bootstrap\Nav;
 use yii\helpers\Url;
 use common\models\Lang;
 use common\models\Text;
+use frontend\widgets\LangWidget;
 ?>
 <?php
 $articles = \common\models\Article::find()->where(['category_id' => '2', 'is_published' => '1', 'lang_id' => Lang::getCurrent()->id])->orderBy('created DESC')->all();
@@ -59,17 +60,9 @@ $downArticles = \common\models\Article::find()->where(['category_id' => '7', 'is
                     <li><a target="_blank" href="<?= Text::getValue('google')?>"><img src="/img/google.png" alt=""></a></li>
                     <li><a target="_blank" href="<?= Text::getValue('face')?>"><img src="/img/face.png" alt=""></a></li>
                 </ul>
-                <?php
-                $current = Lang::getCurrent();
-                $langs = Lang::find()->where('id != :current_id', [':current_id' => Lang::getCurrent()->id])->all()
-                ?>
-                <ul class="lang">
-                    <?= Yii::t('app', 'languages') ?>
-                    <li><a href=""><img src="/img/<?= $current->photo ?>" alt=""></a></li>
-                    <?php foreach ($langs as $lang):?>
-                        <li><a href="<?='/'.$lang->url.Yii::$app->getRequest()->getLangUrl()?>"><img src="/img/<?= $lang->photo ?>" alt=""></a></li>
-                    <?php endforeach;?>
-                </ul>
+                <!--Языки виджет start-->
+                
+                <!--Языки виджет end-->
             </div>
 
         </div>

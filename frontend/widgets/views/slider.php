@@ -23,9 +23,11 @@ use common\models\Lang;
                 );
                 ?>
             </div>
-            <div><?= (Lang::getCurrent()->id == 1) ? $slide->title_en : ' '; ?></div>
-            <div><?= (Lang::getCurrent()->id == 2) ? $slide->title_ru : ' '; ?></div>
-            <div><?= (Lang::getCurrent()->id == 3) ? $slide->title_kz : ' '; ?></div>
+            <div class="slider_item_title">
+                <?= (Lang::getCurrent()->id == 1) ? $slide->title_en : ' '; ?>
+                <?= (Lang::getCurrent()->id == 2) ? $slide->title_ru : ' '; ?>
+                <?= (Lang::getCurrent()->id == 3) ? $slide->title_kz : ' '; ?>
+            </div>
         </div>
     <?php } ?>
 </div>
