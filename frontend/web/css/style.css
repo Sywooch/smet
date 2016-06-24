@@ -469,7 +469,7 @@ footer {
     margin-right: 15px;
 }
 .field-feedbackform-file, .send-request {
-    float: right;
+    float: left;
 }
 .form-group.field-feedback-verifycode {
     float: left;
